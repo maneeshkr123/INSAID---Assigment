@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSAID Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@100;300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo" src="images/logo.png" alt="logo">
+        <h2>Reserve your seat with Scholarship</h2>
+        <img class="ribbon" src="images/ribbon.png" alt="Ribbon">
+    </div>
+
+    <div class="body">
+
+        <div class="left">
+            <h2>Select one program : </h2>
+            <div class="card">
+                <input type="checkbox"  onchange="getValue(this)" name="program" value="Global Certificate in Data Science & AI (GCDAI)" class="program">
+                <h3>Global Certificate in Data Science & AI (GCDAI)</h3>
+                <p style="
+                margin-top: -40px;
+                background-color:#d0021b; 
+                font-size: 12px; 
+                float: right;
+                padding: 3px 5px;
+                border-radius: 10px;
+                color: white;
+                ">Most in Demand</p> <br>
+                No. of Terms: 10 | Duration: 11 Months <br><br>
+
+                Term 1: Data Analysis with Python<br><br>
+
+                Term 2: Data Visualization Techniques<br><br>
+
+                Term 3: EDA & Data Storytelling + Minor Project<br><br>
+
+                Term 4: Machine Learning Foundation<br><br>
+
+                Term 5: Machine Learning Intermediate<br><br>
+
+                Term 6: Machine Learning Advanced + Capstone Project<br>
+                Data Visualization with Tableau (Elective - 1)<br>
+                Data Analytics with R (Elective - 2)<br><br>
+
+                Term 7: Basics of AI, Tensorflow & Keras<br><br>
+
+                Term 8: Deep Learning Foundation<br><br>
+
+                Term 9: Computer Vision - I / Natural Language Processing - I +
+                AI Capstone Project<br><br>
+
+                Term 10: Computer Vision - II / Natural Language Processing - II
+            </div>
+            <div class="card">
+                <input type="checkbox"  onchange="getValue(this)"  name="program" value="Global Certificate in Data Science (GCD)" class="program">
+                <h3>Global Certificate in Data Science (GCD)</h3><p style="
+                margin-top: -40px;
+                margin-right: 10px;
+                background-color:rgb(78, 78, 221); 
+                font-size: 12px; 
+                float: right;
+                padding: 3px 5px;
+                border-radius: 10px;
+                color: white;
+                ">Most Popular</p> <br>
+                No. of Terms: 6 | Duration: 6 Months <br><br>
+
+                Term 1: Data Analysis with Python<br><br>
+
+                Term 2: Data Visualization Techniques<br><br>
+
+                Term 3: EDA & Data Storytelling + Minor Project<br><br>
+
+                Term 4: Machine Learning Foundation<br><br>
+
+                Term 5: Machine Learning Intermediate<br><br>
+
+                Term 6: Machine Learning Advanced + Capstone Project<br><br>
+                Data Visualization with Tableau (Elective - 1)<br><br>
+                Data Analytics with R (Elective - 2)
+            </div>
+            <div class="card">
+                <input type="checkbox"  onchange="getValue(this)" name="program" value="Certificate in Data Science Foundation (CDF)" class="program">
+                <h3>Certificate in Data Science Foundation (CDF)</h3><br>
+                No. of Terms: 3 | Duration: 3 Months<br><br>
+
+                Term 1: Data Analysis with Python<br><br>
+
+                Term 2: Data Visualization Techniques<br><br>
+
+                Term 3: EDA & Data Storytelling + Minor Project
+            </div>
+        </div>
+        <div class="right">
+            <form class="form" action="pay.php" method="POST">
+                Program Selected:
+                <p style="font-weight: bold; font-size: large;" id="course"></p>
+                Reserve your seat: INR 3000
+                <input type="text" name="fname" id="fname" placeholder="Enter First Name" required>
+                <input type="text" name="lname" id="lname" placeholder="Enter Last Name" required>
+                <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                <select name="batch" id="batch" required>
+                    <option value="" disabled selected>Select Batch</option>
+                    <option value="first">May 9, 2021</option>
+                </select>
+                <button style="font-size: 18px; font-weight: bold; background-image: linear-gradient(rgb(245, 245, 19), rgb(221, 16, 16));" type="submit" name='btn' onclick="return empty()">Reserve My seat with Scholarship</button>
+            </form>
+
+
+            <div class="feedback-cards">
+                <div class="feedback">
+                    <img src="images/1.png" alt="" />
+                    <p class="quote">“In class interaction with Faculty is simply Amazing</p>
+                    <p class="ref">Kali Pandey,Wipro <br> GCD, August'18</p>
+                </div>
+                <div class="feedback">
+                    <img src="images/2.png" alt="" />
+                    <p class="quote">“GCD program is perfect for professionals wanting to become Data leaders of
+                        tomorrow”</p>
+                    <p class="ref">Suchit Majumdar, <br> Chief Data Scientist, INSAID</p>
+                </div>
+            </div>
+
+            <div class="tools">
+                <h1 style="text-align: center;">Tools Covered</h1>
+                <div class="logos"><img src="images/python.png" alt="">
+                    <img src="images/R.png" alt="">
+                    <img src="images/tensorflow.jpg" alt="">
+                </div>
+                <p style="text-align: center;">100% program satisfaction guarenteed!<br>
+                    Start your Data Science Journey Today</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+        <div style="
+            background: #fff;
+            color: #666;
+            box-shadow: 0 5px 15px rgba(0,0,0,.08);
+            height: 300px;
+            border-radius: 5px;
+            border: solid 1px #979797;
+            " class="spacer next">
+
+            <br><br>
+            <h3 id="remove_margin" style="margin-left: 30px;text-align: center;">What happens Next?</h3>
+            <br><br><br>
+            <br>
+            <div id="remove_margin" class="column mcb-column one column_column  column-margin-10px">
+
+                <div class="stepwizard">
+
+
+                    <div class="stepwizard-row">
+
+                        <div class="stepwizard-step">
+
+
+
+                            <p style="
+                            margin: unset !important;
+                            margin-top: -60px !important;
+                            font-family: Helvetica;
+                            font-size: 50px;
+                            font-weight: normal;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: normal;
+                            letter-spacing: 0.3px;
+                            text-align: center;
+                            color: #002033;
+                            ">1</p>
+                            <button type="button" class="btn btn-primary btn-circle" style="
+    margin-top: -1px !important;
+"></button>
+
+
+                            <p>Pay complete program fee or<br>
+                                Reserve your seat</p>
+                        </div>
+                        <div class="stepwizard-step">
+                            <p style="
+    margin: unset !important;
+    margin-top: -60px !important;
+    font-family: Helvetica;
+    font-size: 50px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #002033;
+">2</p>
+                            <button type="button" class="btn btn-default btn-circle" style="
+    border: solid 3px #d0021b;    margin-top: -1px !important;
+"></button>
+                            <p>Complete scholarship application <br>
+                                &amp; pay remaining fee before deadline </p>
+                        </div>
+                        <div class="stepwizard-step">
+                            <p style="
+                            margin: unset !important;
+                            margin-top: -60px !important;
+                            font-family: Helvetica;
+                            font-size: 50px;
+                            font-weight: normal;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: normal;
+                            letter-spacing: 0.3px;
+                            text-align: center;
+                            color: #002033;
+                        ">3</p>
+                            <button type="button" class="btn btn-default btn-circle"
+                                style="border: solid 3px #7ed321;    margin-top: -1px !important;"></button>
+                            <p>Start your pre program prep with <br> Python &amp; Statistics Starter Kit</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="body">
+        <div class="card-left">
+            <div class="card half-card">
+                <h2 style="text-align: center;">What’s Included</h2>
+                <div style="
+                border: solid 1px #002033;
+                width: 141px;
+                margin-left: 34%;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+            "></div><br>
+
+                <i class="fas fa-check"></i> 1 Year access to Learning Centre <br> <br>
+                <i class="fas fa-check"></i> 1 Year access to Career Centre <br> <br>
+                <i class="fas fa-check"></i> 2 Year access to Industry Immersion<br> <br>
+                <i class="fas fa-check"></i> 2 Year access to Community<br> <br>
+                <i class="fas fa-check"></i> Placement assistance with social profile
+                evaluation<br>
+                - LinkedIn<br>
+                - GitHub<br>
+                - Resume Workshop
+            </div>
+        </div>
+        <div class="card-right">
+            <div class="card half-card">
+                <h2 style="text-align: center;">Exclusive Value Adds You can’t miss!</h2>
+                <div style="
+    border: solid 1px #002033;
+    width: 141px;
+    margin-left: 34%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+"></div><br>
+                <i class="fas fa-check"></i> FREE Upgrade: From 1 year to LIFETIME access to Learning Centre <br><br>
+                <i class="fas fa-check"></i> FREE Upgrade: From 1 year to LIFETIME access to Career Centre <br><br>
+                <i class="fas fa-check"></i> FREE Upgrade: LIFETIME access to Community <br><br>
+                <i class="fas fa-check"></i> FREE Upgrade: Get to attend all Optional terms <br><br>
+                <i class="fas fa-check"></i> FREE Booster: Get to attend all electives <br><br>
+                <i class="fas fa-check"></i> FREE Booster: Flexibility to repeat 2 terms
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <i class="fa fa-envelope"></i> admissions@insaid.co | <i class="fa fa-phone-alt"></i> +91 9625811095 <br>
+        © 2021 INSAID. All Rights Reserved.
+
+    </div>
+
+
+</body>
+<script src="index.js"></script>
+</html>
